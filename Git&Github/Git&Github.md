@@ -10,8 +10,8 @@
 
 ### _`Trying out Github`_
 
-- we can use Github desktop
-- publish file to Github
+- We can use Github desktop
+- Publish file to Github
 
 <br/>
 
@@ -52,7 +52,7 @@
 - Issues panel
 - Issue: 아직 하지 않은 일, 사람들이 발견한 문제/버그 기록
 - Issue 생성 후 pull request 시 Issue 명시로 활용 가능
-- 라벨 attach 가능
+- 라벨 attach 기능
 - 피드백 조직화
 - 프로젝트 더 잘 관리 가능
 - milestone: version 올릴 때 필요한 것들을 모아두는 곳
@@ -61,6 +61,60 @@
 - 해결된 이슈 리스트화 가능 (milestone)
 
 <br/>
+
+#
+
+## <u>[CLI]</u>
+
+<br/>
+
+### _`CLI log, commit, push`_
+
+- git add 파일이름.확장자명 (working area -> staging area) <br/>
+  git add . (this directory)
+- git commit -m "commit message" <br/>
+  (cf. git commit -help)
+- git log: commit 이력 볼 수 있음 <br/>
+  HEAD -> main; 내 컴퓨터에 커밋됨 <br/>
+  origin/main; github repository에 커밋됨 <br/>
+  q를 통해 log 창 나가기
+- git push origin main
+
+<br/>
+
+### _`Checkout and Hard Reset`_
+
+- 마지막 커밋 로그 (이전 로그 combination): HEAD <br/>
+  HEAD; 현재 파일 정보 위치 표시
+- git checkout <돌아가고 싶은 commit 이름> <br/>
+  (실제로 과거 커밋 아직 수정 X)
+- git checkout main: 다시 원래 상태로 되돌아오기
+- git reset --hard HEAD^: --hard: 커밋 삭제, HEAD^: HEAD에서 얼마나 멀리 갈지 표시) <br/>
+- ex1) git reset --hard HEAD: 현재 같은 장소 그대로 <br/>
+  ex2) git reset --hard HEAD^: 한 커밋 이전으로 돌아가기 <br/>
+  ex3) git reset --hard HEAD^^: 두 커밋 이전으로 돌아가기 <br/>
+  if, doesn't work; git reset --hard "HEAD^" / git reset --hard HEAD~1 (number)
+- git push origin main --force; 강제 push로 깃허브 커밋 삭제
+- git reset HEAD^: soft reset
+
+<br/>
+
+### _`Mixed Reset`_
+
+<br/>
+
+### _`Soft Reset`_
+
+<br/>
+
+#
+
+## [참고]
+
+- VS Code; M: Modified, U: Untracked, A: added
+- origin: 원격 코드 저장소
+- 항상 작업 디렉토리에서 git 명령어 수행!
+- windows terminal에서 ^ 이 git 명령어로 인식 안될 수 있음
 
 #
 
