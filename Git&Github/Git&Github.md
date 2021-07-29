@@ -1,8 +1,14 @@
-# Github
+# Git&Github
+
+## <u>[Git]</u>
+
+### [Reference](https://nomadcoders.co/git-for-beginners)
+
+#
 
 ## <u>[Github]</u>
 
-[Reference](https://nomadcoders.co/git-for-beginners)
+### [Reference](https://nomadcoders.co/git-for-beginners)
 
 <br/>
 

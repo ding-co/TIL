@@ -1,5 +1,3 @@
-# Javascript
-
 ## [문서 객체 조작하기]
 
 [Reference](https://www.youtube.com/watch?v=a43xV0ajVgM&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=42)
