@@ -2,13 +2,9 @@
 
 ## <u>[Git]</u>
 
-### [Reference](https://nomadcoders.co/git-for-beginners)
-
 #
 
 ## <u>[Github]</u>
-
-### [Reference](https://nomadcoders.co/git-for-beginners)
 
 <br/>
 
@@ -65,3 +61,9 @@
 - 해결된 이슈 리스트화 가능 (milestone)
 
 <br/>
+
+#
+
+### [레퍼런스]
+
+[Reference1](https://nomadcoders.co/git-for-beginners)

@@ -1,8 +1,5 @@
 ## <u>[익명 객체]</u>
 
-[Reference1](https://www.youtube.com/watch?v=yMGt8KYikac&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=52)
-[Reference2](https://www.youtube.com/watch?v=ZWVSnfwth8M&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=53)
-
 <br/>
 
 ### _`익명 자식 객체 생성`_
@@ -55,3 +52,10 @@
 #
 
 ## [참고]
+
+#
+
+### [레퍼런스]
+
+[Reference1](https://www.youtube.com/watch?v=yMGt8KYikac&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=52)
+[Reference2](https://www.youtube.com/watch?v=ZWVSnfwth8M&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=53)

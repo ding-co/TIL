@@ -1,7 +1,5 @@
 ## [문서 객체 조작하기]
 
-[Reference](https://www.youtube.com/watch?v=a43xV0ajVgM&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=42)
-
 <br/>
 
 ### _문서 객체 글자 조작하기_
@@ -31,8 +29,6 @@
 
 ## [문서 객체 생성, 제거, 이동]
 
-[Reference](https://www.youtube.com/watch?v=k9ZXWAh2Hj0&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=43)
-
 <br/>
 
 ### _문서 객체 생성하기_
@@ -56,8 +52,6 @@
 
 ## [문서 객체 이벤트 기본]
 
-[Reference](https://www.youtube.com/watch?v=ByKGf9h9Qy0&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=44)
-
 <br/>
 
 ### _이벤트 연결_
@@ -75,8 +69,6 @@
 #
 
 ## [이벤트 활용]
-
-[Reference](https://www.youtube.com/watch?v=HQIM5PES29Q&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=45)
 
 <br/>
 
@@ -121,3 +113,12 @@
 - 선언적 함수; function f() {}
 - 익명함수; const f = function () {}
 - 화살표 함수; () => {} <br/>
+
+#
+
+### [레퍼런스]
+
+[Reference1](https://www.youtube.com/watch?v=a43xV0ajVgM&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=42)
+[Reference2](https://www.youtube.com/watch?v=k9ZXWAh2Hj0&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=43)
+[Reference3](https://www.youtube.com/watch?v=ByKGf9h9Qy0&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=44)
+[Reference4](https://www.youtube.com/watch?v=HQIM5PES29Q&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=45)
