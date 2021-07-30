@@ -2,8 +2,6 @@
 
 ## python, telnet, putty, git 설치
 
-[Reference](https://www.youtube.com/watch?v=LQauC9s_8z4&list=PLEOnZ6GeucBVj0V5JFQx_6XBbZrrynzMh&index=7)
-
 <br>
 
 ### _Python_
@@ -45,13 +43,9 @@
 
 ## 도커에서 리눅스 컨테이너 구동 팁
 
-[Reference](https://www.youtube.com/watch?v=9qGVr4W4raY&list=PLEOnZ6GeucBVj0V5JFQx_6XBbZrrynzMh&index=8)
-
 #
 
 ## Shell Script & Cron
-
-[Reference](https://www.youtube.com/watch?v=035pZp2R50M&list=PLEOnZ6GeucBVj0V5JFQx_6XBbZrrynzMh&index=9)
 
 <br>
 
@@ -60,3 +54,17 @@
 <br>
 
 ### _Cron (for backup)_
+
+#
+
+## [참고]
+
+-
+
+#
+
+## [레퍼런스]
+
+[Reference1](https://www.youtube.com/watch?v=LQauC9s_8z4&list=PLEOnZ6GeucBVj0V5JFQx_6XBbZrrynzMh&index=7)
+[Referenc2](https://www.youtube.com/watch?v=9qGVr4W4raY&list=PLEOnZ6GeucBVj0V5JFQx_6XBbZrrynzMh&index=8)
+[Reference3](https://www.youtube.com/watch?v=035pZp2R50M&list=PLEOnZ6GeucBVj0V5JFQx_6XBbZrrynzMh&index=9)
