@@ -1,6 +1,6 @@
 # Doodle
 
-## 1.Interview question (Math + CS)
+## 1. Interview question (Math + CS)
 
 > ### Q. Function; generates a number from 0 to 1 randomly; uniformly distributed <br/>
 >
