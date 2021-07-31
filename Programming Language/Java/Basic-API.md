@@ -178,6 +178,136 @@ public class KeyExample {
 
 <br/>
 
+- **_String 생성자_**
+
+  - 직접 String 객체 생성 (다양한 생성자 overloading 되어 있음) <br/>
+    ex) String str = "자바";
+
+    ```java
+    public class Main {
+      public static void main(String[] args) {
+        byte[] bytes = new byte[100];
+
+        System.out.print("입력: ");
+        int readByteNo = System.in.read(bytes);
+
+        // - 2 => enter (/r /n)
+        String str = new String(bytes, 0, readByteNo - 2);
+        System.out.println(str);
+      }
+    }
+    ```
+
+- **_String 메소드_**
+
+  - _*charAt(int index)*_
+
+    - 문자 추출
+    - 지정한 index 해당 문자 return char
+
+    <br/>
+
+  - _*equals(Object anObject)*_
+
+    - 두 문자열 비교
+    - == 연산자 사용 X
+    - Object 클래스의 메소드 override
+    - 기준문자열객체.equals(비교문자열객체)
+
+    <br/>
+
+  - _*getBytes()*_
+
+    - 문자열 -> byte[] <br/>
+      각각의 문자를 byte로 만들어서 배열로 저장 후 return
+    - OS가 기본적으로 사용하는 문자셋 이용 -> byte <br/>
+      (시스템(OS)의 기본 문자셋으로 인코딩된 바이트 배열 리턴)
+    - 윈도우 운영체제; MS949 (EUC-KR) 문자셋 이용 (영어 1바이트, 한글 2바이트) <br/>
+      cf. UTF-8 문자셋 (영어 1바이트, 한글 3바이트) <br/>
+    - byte[] -> 문자열 디코딩 시, 어떤 문자셋으로 인코딩 되었는지에 따라 다름 <br/>
+      String(byte[] bytes, String charsetName) 생성자 이용 <br/>
+      charsetName 에 처음에 인코딩 했을 시의 문자셋으로 동일하게 적용해야 복원이 잘 됨
+
+    <br/>
+
+  - _*getBytes(Charset charset)*_
+
+    - 우리가 제공하는 set 정보 이용 -> byte <br/>
+      ex) EUC-KR, UTF-8
+    - charset이 정한 기준대로 byte 배열 만들어짐 <br/>
+      (특정 문자셋으로 인코딩된 바이트 배열 리턴)
+
+    <br/>
+
+  - _*indexOf(String str)*_
+
+    - 주어진 문자열 시작 위치 return int
+    - 문자열 위치 찾기 용도
+    - 전체 문자열에서 주어진 문자열이 포함되어 있지 않으면 return -1 <br/>
+      cf) contains("찾는 문자열")
+
+    <br/>
+
+  - _*length()*_
+
+    - 문자열 길이 return int
+    - input form 에서 사용자의 id, password 등 받을 때, <br/>
+      사용자가 최소한의 문자 수를 입력하는지 체크 용도에 활용 가능
+
+    <br/>
+
+  - _*replace(CharSequence target, CharSequence replacement)*_
+
+    - 기존 존재하는 문자열에서 특정 부분 대체 (문자열 대치)
+    - replace("찾고자 하는 문자열", "대치 시킬 새로운 문자열")
+    - <u>힙 영역에 새로운 문자열 객체가 생성됨</u> <br/>
+      (원본 문자열은 변경 X, 비파괴적 처리 메소드임) <br/>
+      이유: String 타입은 문자열이 한번 저장되면 다른 문자열로 변경 불가 <br/>
+      (immutable object)
+
+    <br/>
+
+  - _*substring(int beginIndex)*_
+
+    - 문자열에서 특정 위치 ~ 마지막까지 일부분 추출 <br/>
+      (주어진 인덱스 ~ 끝까지)
+
+    <br/>
+
+  - _*substring(int beginIndex, int endIndex)*_
+
+    - 문자열에서 시작 위치 ~ 끝 위치 일부분 추출 <br/>
+      (주어진 시작과 끝 인덱스 사이)
+    - 주어진 끝 위치는 exclusive [미만]
+
+    <br/>
+
+  - _*toLowerCase()*_, _*toUpperCase()*_
+
+    - toLowerCase(): 원본 문자열(알파벳) 모두 소문자로 변환한 새로운 문자열 return
+    - toUpperCase(): 원본 문자열(알파벳) 모두 대문자로 변환한 새로운 문자열 return
+    - 검색 엔진에 활용
+    - 힙 영억에 새로운 문자열 객체 생성됨 <br/>
+      (원본 문자열 변경 X, 비파괴적 처리 메소드)
+
+    <br/>
+
+  - _*trim()*_
+
+    - 문자열 앞, 뒤 공백 제거
+    - 힙 영역에 새로운 문자열 객체 생성됨 <br/>
+      (원본 문자열 변화 X, 비파괴적 처리 메소드)
+
+    <br/>
+
+  - _*valueOf(int i)*_, _*valueOf(double d)*_
+
+    - 기본 타입 값 -> 문자열
+    - 여러 기본 타입 메소드 overloading 되어 있음
+    - String.valueOf() 정적 메소드
+
+<br/>
+
 > Wrapper 클래스
 
 - 기본 타입의 데이터를 갖는 객체 만들 때 사용
@@ -189,8 +319,6 @@ public class KeyExample {
 
 - 수학 함수 이용
 - 모두 정적 메소드
-
-<br/>
 
 #
 
@@ -207,7 +335,19 @@ public class KeyExample {
 - Ctrl + Space bar: 자동 override
 - (Java) 클래스의 필드/생성자/메소드 정보 얻어서 활용 => Reflection
 - Class 객체 얻기 메소드; 모두 같은 객체 참조 (새로운 인스턴스 생성한 적 X)
--
+- Enter 입력 시, /r /n (2개 키코드 값 입력됨) <br/>
+  /r (13) 캐리지 리턴, /n (10) 라인 피드
+- ssn(social security number): 주민번호
+- String 에서 new로 String 객체를 생성하지 않고 그냥 문자열 literal로 번지를 참조변수에 대입 시, <br/>
+  같은 객체를 공유하게 됨 <br/>
+  new 로 생성하면 항상 새로운 별개의 객체가 됨
+- 문자열을 byte 배열로 바꾸는 과정: 인코딩 <br/>
+  byte 배열을 다시 문자열로 만드는 과정: 디코딩
+- 이클립스; window - Preferences - General - Workspace; 윈도우 OS 기본 인코딩 문자셋 (MS949) 확인 가능
+- 배열 길이 => .length <정적 필드 속성> <br/>
+  문자열 길이 => .length() <메소드>
+- Java 언어; 문자열 내부 문자 대소문자 구분 O (case sensitive)
+- Java 언어; System.out.println() 안에 여러 값 ,로 넣을 수 없음
 
 #
 
@@ -217,3 +357,6 @@ public class KeyExample {
 [Reference2](https://www.youtube.com/watch?v=RHi_kkS2noQ&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=58)
 [Reference3](https://www.youtube.com/watch?v=nJbaGQtFLTU&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=59)
 [Reference4](https://www.youtube.com/watch?v=IEs-pnSXvoU&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=60)
+[Reference5](https://www.youtube.com/watch?v=u4i4DMqG8b0&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=61)
+[Reference6](https://www.youtube.com/watch?v=meNQOC_Qp3U&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=62)
+[Reference7](https://www.youtube.com/watch?v=v_kBdmxktG0&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=63)
