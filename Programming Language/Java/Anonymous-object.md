@@ -51,11 +51,11 @@
 
 #
 
-## [참고]
+## [Note]
 
 #
 
-### [레퍼런스]
+### [Reference]
 
 [Reference1](https://www.youtube.com/watch?v=yMGt8KYikac&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=52)
 [Reference2](https://www.youtube.com/watch?v=ZWVSnfwth8M&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=53)

@@ -126,7 +126,7 @@
 
 #
 
-## [참고]
+## [Note]
 
 - VS Code; M: Modified, U: Untracked, A: added
 - origin: 원격 코드 저장소
@@ -140,6 +140,6 @@
 
 #
 
-### [레퍼런스]
+### [Reference]
 
 [Reference1](https://nomadcoders.co/git-for-beginners)

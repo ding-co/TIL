@@ -89,7 +89,7 @@ try {
 
 #
 
-## [참고]
+## [Note]
 
 - eclipse; [source] -> [format] // ctrl + shift + f; 코드 라인 정리
 - main 메소드는 JVM이 호출함
@@ -97,7 +97,7 @@ try {
 
 #
 
-### [레퍼런스]
+### [Reference]
 
 [Reference1](https://www.youtube.com/watch?v=9NzkWg8btNM&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=54)
 [Reference2](https://www.youtube.com/watch?v=QJm-96zVBco&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=55)

@@ -194,7 +194,7 @@ public class KeyExample {
 
 #
 
-## [참고]
+## [Note]
 
 - GC: Garbage Collector (쓰레기 수집기)
 - API: Application Programming Interface
@@ -211,7 +211,7 @@ public class KeyExample {
 
 #
 
-### [레퍼런스]
+### [Reference]
 
 [Reference1](https://www.youtube.com/watch?v=4g6CWh3weuY&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=57)
 [Reference2](https://www.youtube.com/watch?v=RHi_kkS2noQ&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=58)

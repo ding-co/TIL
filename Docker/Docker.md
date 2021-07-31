@@ -2,6 +2,6 @@
 
 #
 
-### [레퍼런스]
+### [Reference]
 
 [Reference1](#)

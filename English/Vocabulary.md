@@ -10,7 +10,7 @@ cf). She's strange and weird.
 
 #
 
-### [레퍼런스]
+### [Reference]
 
 [Reference1](https://www.youtube.com/watch?v=4HnwylqrPFM)
 [Reference2](https://www.youtube.com/watch?v=OKm3wqAqd3E)

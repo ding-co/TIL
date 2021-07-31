@@ -102,7 +102,7 @@
 
 #
 
-### [참고]
+### [Note]
 
 - hr 태그: 구분선
 - 태그 안에 텍스트 넣기; textContent 속성 사용
@@ -116,7 +116,7 @@
 
 #
 
-### [레퍼런스]
+### [Reference]
 
 [Reference1](https://www.youtube.com/watch?v=a43xV0ajVgM&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=42)
 [Reference2](https://www.youtube.com/watch?v=k9ZXWAh2Hj0&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=43)

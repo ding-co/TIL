@@ -36,6 +36,6 @@ def estimate_pi(n):
 
 #
 
-## [레퍼런스]
+## [Reference]
 
 [Reference1](https://www.youtube.com/watch?v=pvimAM_SLic)

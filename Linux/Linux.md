@@ -57,13 +57,11 @@
 
 #
 
-## [참고]
-
--
+## [Note]
 
 #
 
-## [레퍼런스]
+## [Reference]
 
 [Reference1](https://www.youtube.com/watch?v=LQauC9s_8z4&list=PLEOnZ6GeucBVj0V5JFQx_6XBbZrrynzMh&index=7)
 [Referenc2](https://www.youtube.com/watch?v=9qGVr4W4raY&list=PLEOnZ6GeucBVj0V5JFQx_6XBbZrrynzMh&index=8)
