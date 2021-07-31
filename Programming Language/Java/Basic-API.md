@@ -308,10 +308,35 @@ public class KeyExample {
 
 <br/>
 
-> Wrapper 클래스
+> Wrapper(포장) 클래스
 
-- 기본 타입의 데이터를 갖는 객체 만들 때 사용
-- 문자열 -> 기본 타입 변환 시 사용
+- 문자열 -> 기본 타입 변환 시 사용 가능
+- 기본 타입의 데이터를 갖는 객체 만들 때 사용 <br/>
+  기본 타입의 값을 내부에 두고 포장하는 객체 (포장 객체) <br/>
+  ex 1) char (기본 타입) - Character (포장 클래스) <br/>
+  ex 2) int (기본 타입) - Integer (포장 클래스)
+- Boxing: 기본 타입의 값 -> Wrapper 객체 <br/>
+  (1. 생성자 이용 - 기본 타입의 값 / 문자열 -> 기본 타입의 값) // deprecated <br/>
+  (2. Wrapper 클래스가 가진 valueOf() 정적 method 이용; () 안에 기본 타입의 값 / 문자열 모두 가능) <br/>
+- Unboxing: Wrapper 객체 -> 기본 타입의 값 <br/>
+  (기본 타입 이름 + Value() 메소드 호출) <br/>
+  ex 1) obj.charValue() <br/>
+  ex 2) obj.intValue() <br/>
+- Auto boxing: Wrapper 클래스 타입에 기본 값이 대입 될 경우 자동 박싱 발생
+- Auto unboxing: 기본 타입에 포장 객체가 대입 되거나 연산에서 자동 언박싱 박생
+- 문자열 -> 기본 타입 값으로 변환 <br/>
+  포장 클래스로 문자열 -> 기본 타입 값 변환 <br/>
+  'parse+기본 타입 이름' 정적 메소드 <br/>
+  ex) Integer.parseInt(), Double.parseDouble() <br/>
+- 포장 값 비교 <br/>
+  포장 객체는 내부 값 비교 위해 == 및 != 연산자 사용 X <br/>
+  언박싱한 값 얻어 비교!
+- 박싱 객체 공유 <br/>
+  boolean 타입: true, false (값의 범위) <br/>
+  char 타입: \u0000 ~ \u0007f (값의 범위) <br/>
+  byte, shrot, int 타입: -128 ~ 127 (값의 범위) <br/>
+  => <u>언박싱한 값으로 비교하는게 좋음</u> <br/>
+  => <u>equals() 활용!!!</u>
 
 <br/>
 
@@ -348,6 +373,9 @@ public class KeyExample {
   문자열 길이 => .length() <메소드>
 - Java 언어; 문자열 내부 문자 대소문자 구분 O (case sensitive)
 - Java 언어; System.out.println() 안에 여러 값 ,로 넣을 수 없음
+- 원래 Java 에서는 기본 타입의 값을 클래스 타입 변수에 대입할 수 없고,<br/>
+  객체도 기본 타입 변수에 대입할 수 없지만 <br/>
+  자동 박싱/언박싱 개념에서는 가능
 
 #
 
