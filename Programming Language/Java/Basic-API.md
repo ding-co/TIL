@@ -13,7 +13,7 @@
 - [JDK8](https://docs.oracle.com/javase/8/docs/api/index.html) / [JDK11](https://docs.oracle.com/en/java/javase/11/docs/api/index.html)
 - 이클립스; 찾고자 하는 내용 선택(드래그)해서 F1 - Help 뷰 - 링크 클릭
 
-<br/>
+#
 
 ### _`java.lang 패키지`_
 
@@ -398,6 +398,50 @@ public class KeyExample {
 
 #
 
+### _`java.util 패키지`_
+
+- 날짜 정보 제공 유용한 API 포함
+- import 필요 <br/>
+  cf) Ctrl + Shift + o (자동 임포트)
+
+<br/>
+
+> Date 클래스
+
+- 날짜 표현 클래스
+- 날짜와 시간 정보 저장 클래스
+- 객체 간 날짜 data 주고 받을 때 매개 변수나 리턴 타입으로 주로 사용 <br/>
+  ex 1) void method(Date date){...}, Date method(){...} <br/>
+  ex 2) <u>Date now = new Date();</u>
+- 원하는 날짜 형식 문자열 얻기 위해 java.text 패키지의 SimpleDataFormat 클래스와 함께 사용 <br/>
+  ex) <u>SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 hh시 mm분 ss초");</u>
+- format() 메소드 호출 <br/>
+  ex) <u>String strNow = sdf.format(now);</u>
+
+<br/>
+
+> Calendar 클래스
+
+- 달력을 표현한 클래스
+- 운영체제의 날짜와 시간 기준으로 다양한 정보 얻을 수 있음
+- 추상 클래스이므로 new 연산자 사용하여 인스턴스 생성 불가
+- getInstance() 정적 메소드 이용 -> Calendar 하위 객체 얻을 수 있음 <br/>
+
+  ```java
+  Calendar now = Calendar.getInstance();
+
+  int year = now.get(Calendar.YEAR);        // return 연도
+  int month = now.get(Calendar.MONTH) + 1;  // return 월 (0 ~ 11) + 1
+  int day = now.get(Calendar.DAY_OF_MONTH); // return 일
+  int week = now.get(Calendar.DAY_OF_WEEK); // return 요일 (1 일 ~ 7 토)
+  int amPm = now.get(Calendar.AM_PM);       // return 오전/오후
+  int hour = now.get(Calendar.HOUR);        // return 시
+  int minute = now.get(Calendar.MINUTE);    // return 분
+  int second = now.get(Calendar.SECOND);    // return 초
+  ```
+
+#
+
 ## [Note]
 
 - GC: Garbage Collector (쓰레기 수집기)
@@ -427,6 +471,7 @@ public class KeyExample {
 - 원래 Java 에서는 기본 타입의 값을 클래스 타입 변수에 대입할 수 없고,<br/>
   객체도 기본 타입 변수에 대입할 수 없지만 <br/>
   자동 박싱/언박싱 개념에서는 가능
+- 추상 클래스는 new 연산자로 인스턴스 생성 불가
 
 #
 
@@ -439,3 +484,5 @@ public class KeyExample {
 [Reference5](https://www.youtube.com/watch?v=u4i4DMqG8b0&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=61)
 [Reference6](https://www.youtube.com/watch?v=meNQOC_Qp3U&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=62)
 [Reference7](https://www.youtube.com/watch?v=v_kBdmxktG0&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=63)
+[Reference8](https://www.youtube.com/watch?v=fizxPTz7jo0&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=64)
+[Reference9](https://www.youtube.com/watch?v=SPQ6brNjOSE&list=PLVsNizTWUw7HZTPU3GpS7nmshXjKKvlbk&index=65)
