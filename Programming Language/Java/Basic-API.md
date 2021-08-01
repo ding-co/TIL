@@ -11,7 +11,7 @@
 - Java Platform: 자바 언어가 실행하는 환경
 - Standard Edition: JDK (Java Development Kit)
 - [JDK8](https://docs.oracle.com/javase/8/docs/api/index.html) / [JDK11](https://docs.oracle.com/en/java/javase/11/docs/api/index.html)
-- 이클립스; F1 - Help 뷰 - 링크 클릭
+- 이클립스; 찾고자 하는 내용 선택(드래그)해서 F1 - Help 뷰 - 링크 클릭
 
 <br/>
 
@@ -112,7 +112,7 @@ public class KeyExample {
 - OS 정보가 가지고 있는 표준 입/출력 장치 이용
 - JVM 종료 시 사용
 - G.C 실행 요청 시 사용
-- 모든 필드와 메소드는 정적 필드와 정적 메소드 (OS 기능 - 자바에서 바로 사용)
+- 모두 정적 필드와 정적 메소드 (OS 기능 - 자바에서 바로 사용)
 
 <br/>
 
@@ -344,6 +344,57 @@ public class KeyExample {
 
 - 수학 함수 이용
 - 모두 정적 메소드
+
+- **_수학 계산에 사용하는 다양한 메소드_**
+
+  - _*int abs(int a), double abs(double a)*_
+
+    - 절대값
+
+    <br/>
+
+  - _*double ceil(double a)*_
+
+    - 올림값
+
+    <br/>
+
+  - _*double floor(double a)*_
+
+    - 버림 값
+
+    <br/>
+
+  - _*int max(int a, int b), double max(double a, double b)*_
+
+    - 최대값
+
+    <br/>
+
+  - _*int min(int a, int b), double min(double a, double b)*_
+
+    - 최소값
+
+    <br/>
+
+  - _*double random()*_
+
+    - 랜덤값 (난수값)
+    - 0.0 이상 1.0 미만 <br/>
+      cf). 1 ~ 10 임의의 정수 난수 얻기 <br/>
+      (int)(Math.random() \* 10) + 1
+
+    <br/>
+
+  - _*double rint(double a)*_
+
+    - 가까운 정수의 실수값
+
+    <br/>
+
+  - _*long round(double a)*_
+
+    - 반올림값
 
 #
 
