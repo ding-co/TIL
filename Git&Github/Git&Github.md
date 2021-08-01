@@ -10,7 +10,6 @@
 
 ### _`Trying out Github`_
 
-- We can use Github desktop
 - Publish file to Github
 
 <br/>
@@ -94,7 +93,7 @@
 - ex1) git reset --hard HEAD 현재 같은 장소 그대로 <br/>
   ex2) git reset --hard HEAD^ 한 커밋 이전으로 돌아가기 <br/>
   ex3) git reset --hard HEAD^^ 두 커밋 이전으로 돌아가기 <br/>
-  if, doesn't work; git reset --hard "HEAD^" / git reset --hard HEAD~1 (number) <br/>
+  if it doesn't work; git reset --hard "HEAD^" / git reset --hard HEAD~1 (number) <br/>
   hard reset; 리셋하는 파일 삭제, 완전히 과거로 돌아감
 - git push origin main --force; 강제 push로 깃허브 커밋 삭제
 
@@ -118,18 +117,65 @@
 - git reset HEAD~2 --soft (2단계 이전으로 돌아감)
 - 이전 커밋에서 변경한 내역을 unstaged 영역에 두지 않음 <br/>
   대신 staged 영역에 추가함
-- unstaged 영역에 작업중인 파일이 있을 때 섞이지 않고 싶을 때 활용
+- unstaged 영역에 작업중인 파일이 있을 때 섞이게 하지 않고 싶을 때 활용
 - 대부분 hard reset으로 되돌려서 다시 시작
 - 가끔 mixed reset 하여 git add, commit, push
 
 <br/>
+
+### _`Checkout Branches`_
+
+- git checkout <커밋 별명>: 과거 커밋 시점으로 돌아가기
+- git checkout -b <새 branch명>: 새 브랜치 생성
+- git checkout <커밋 별명> -b <새 branch명>: 체크아웃 + 브랜치 생성
+- git checkout main: 원래 main 브랜치로 이동, 커밋 원상 복구
+- git branch: 브랜치 목록 보기
+- git push origin <브랜치 명>: 브랜치 깃헙에 올리기
+- git branch -d <브랜치 명>: 브랜치 삭제 (local) <br/>
+  git push origin --delete <브랜치 명>: 원격 저장소에 있는 branch 삭제
+
+<br/>
+
+### _`Amending Commits and Ignoring Files`_
+
+- amend: 가장 마지막 커밋 수정
+- git commit --amend [-m "Message"] --no-edit: 커밋 메세지 수정 X
+- git status: 커밋할 때 파일 상태 확인
+- github에 올라가지 않도록 파일 숨기기 <br/>
+  .gitignore 파일 생성 후 그 안에 숨기고 싶은 파일명 입력
+- github에 이미 올라간 파일 다시 숨기고 싶을 때, .gitignore에 내용 추가하고 <br/>
+  git rm <파일명>: staged area에 올라간 내용 제거 <br/>
+  폴더는 git rm -r <폴더명> <br/>
+  cf) git rm -r <폴더명> --cached <br/>
+  --cached: 이전에 커밋된 내용
+
+<br/>
+
+### _`Origins`_
+
+- git remote -v: remote 목록 보기
+- fetch: 데이터를 원격에서 가져오기, push: 데이터를 원격으로 올리기
+- git remote remove/rm <remote 명>: remote 삭제
+- Bitbucket; git remote add bitbucket <레포지토리 URL> <br/>
+  git push bitbucket main <br/>
+  Bitbucket은 Trello와 동기화 가능 (프로젝트 관리) <br/>
+- Gitlab; git remote add gitlab <프로젝트 URL> <br/>
+  git push gitlab <br/>
+  Gitlab은 CI(지속적 통합) 기능 좋음; but) github도 기능 있음
+
+<br/>
+
+### _`Clone`_
+
+- fork 이후,
+- git clone <레포지토리 URL> [폴더명]
 
 #
 
 ## [Note]
 
 - VS Code; M: Modified, U: Untracked, A: added
-- origin: 원격 코드 저장소
+- origin: 원격 코드 저장소 (for Github)
 - 항상 작업 디렉토리에서 git 명령어 수행!
 - windows terminal에서 ^ 이 git 명령어로 인식 안될 수 있음
 - git remote -v (원격 저장소 확인) <br/>
