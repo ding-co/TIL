@@ -250,6 +250,71 @@
 
 #
 
+## [기본 할 일 목록]
+
+<br/>
+
+### _To do list_
+
+```html
+<head>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const addToDo = () => {
+        if (input.value !== '') {
+          const div = document.createElement('div');
+          document.body.appendChild(div);
+
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+              span.style.textDecoration = 'line-through';
+            } else {
+              span.style.textDecoration = '';
+            }
+          });
+          div.appendChild(checkbox);
+
+          const span = document.createElement('span');
+          span.textContent = input.value;
+          input.value = '';
+          div.appendChild(span);
+
+          const deleteBtn = document.createElement('button');
+          deleteBtn.textContent = '제거하기';
+          deleteBtn.addEventListener('click', () => {
+            div.parentNode.removeChild(div);
+          });
+          div.appendChild(deleteBtn);
+        }
+      };
+
+      const h1 = document.createElement('h1');
+      h1.textContent = 'To do list';
+      document.body.appendChild(h1);
+
+      const input = document.createElement('input');
+      input.addEventListener('keyup', (event) => {
+        if (event.keyCode === 13) {
+          addToDo();
+        }
+      });
+      document.body.appendChild(input);
+
+      const addBtn = document.createElement('button');
+      addBtn.textContent = '추가하기';
+      addBtn.addEventListener('click', () => {
+        addToDo();
+      });
+      document.body.appendChild(addBtn);
+    });
+  </script>
+</head>
+```
+
+#
+
 ### [Note]
 
 - input type을 JS에서 가져올 시, document.querySelector('input[type=button]') 형식
@@ -266,3 +331,4 @@
 [Reference2](https://www.youtube.com/watch?v=xXeDA06E0EA&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=47)
 [Reference3](https://www.youtube.com/watch?v=TsvqQsQrgms&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=48)
 [Reference4](https://www.youtube.com/watch?v=wCf_TS-J2AA&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=49)
+[Reference5](https://www.youtube.com/watch?v=7wD-5T5Xv2M&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=50)
