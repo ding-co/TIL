@@ -22,6 +22,8 @@
 
 > > [Local Storage](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/local-storage.md)
 
+> > [Exception](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Exception.md)
+
 - [`Git & Github`](https://github.com/ding-co/TIL/blob/main/Git%26Github/Git%26Github.md)
 
 - [`Doodle`](https://github.com/ding-co/TIL/blob/main/Doodle/Doodle.md)
