@@ -16,6 +16,8 @@
 
 - `Javascript`
 
+> > [Object basic](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Object-basic.md)
+
 > > [Document Object](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Document-object.md)
 
 > > [Input Form](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Input-form.md)
