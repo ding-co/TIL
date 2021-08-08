@@ -16,6 +16,10 @@
 
 - `Javascript`
 
+> > [Outline](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Outline.md)
+
+> > [Primitive data type](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Primitive-data-type.md)
+
 > > [Object basic](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Object-basic.md)
 
 > > [Document Object](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Document-object.md)
