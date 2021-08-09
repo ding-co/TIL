@@ -1,7 +1,0 @@
-# Linux
-
-#
-
-### [Reference]
-
-[Reference1](#)
