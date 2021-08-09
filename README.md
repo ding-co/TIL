@@ -1,8 +1,12 @@
 # Today I Learned
 
-- [`Linux`](https://github.com/ding-co/TIL/blob/main/Linux/Linux.md)
+- `Linux`
 
-- [`Docker`](https://github.com/ding-co/TIL/blob/main/Docker/Docker.md)
+> > [Outline](https://github.com/ding-co/TIL/blob/main/Linux/Outline.md)
+
+- `MySQL`
+
+> > [Outline](https://github.com/ding-co/TIL/blob/main/MySQL/Outline.md)
 
 - `Java`
 
