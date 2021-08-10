@@ -4,9 +4,13 @@
 
 > > [Outline](https://github.com/ding-co/TIL/blob/main/Linux/Outline.md)
 
+> > [CentOS](https://github.com/ding-co/TIL/blob/main/Linux/CentOS.md)
+
 - `MySQL`
 
 > > [Outline](https://github.com/ding-co/TIL/blob/main/MySQL/Outline.md)
+
+> > [Leaf through](https://github.com/ding-co/TIL/blob/main/MySQL/Leaf-through.md)
 
 - `Java`
 
