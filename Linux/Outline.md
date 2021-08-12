@@ -52,9 +52,9 @@
    - RAM 2GB, HDD SCSI[스카시] 80GB / Single file
    - USB, Sound, Printer 모두 remove
 
-2. Server(B) [Red Hat Enterprise Linux 8 64-bit]
+2. Server(B) [CentOS8]
 
-   - Red Hat Enterprise Linux 8 64-bit
+   - CentOS8 64-bit
    - HDD 40GB / Single file
    - edit => HDD SCSI 40GB
    - USB, Sound, Printer 모두 remove
