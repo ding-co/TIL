@@ -30,6 +30,8 @@
 
 > > [Array](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Array.md)
 
+> > [Loop](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Loop.md)
+
 > > [Function](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Function.md)
 
 > > [Object basic](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Object-basic.md)
