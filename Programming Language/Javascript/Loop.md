@@ -126,6 +126,217 @@ while (i < 10) {
 
 ## [4장 마무리 + 피라미드 예제]
 
+```html
+<script>
+  // 피라미드 예제 1
+  // *
+  // **
+  // ***
+  // ****
+  // *****
+  // ******
+  // *******
+  // ********
+  // *********
+</script>
+```
+
+```html
+<!-- 첫번째 방법: Naive  -->
+<script>
+  let output = '';
+
+  output += '*\n';
+  output += '**\n';
+  output += '***\n';
+  output += '****\n';
+  output += '*****\n';
+  output += '******\n';
+  output += '*******\n';
+  output += '********\n';
+  output += '*********\n';
+
+  console.log(output);
+</script>
+```
+
+### [Key Point]
+
+- 반복문 중첩 사용
+- 횟수에 숫자 표현식 사용 가능
+
+```html
+<!-- 두번째 방법: 중첩 반복문 사용  -->
+<script>
+  let output = '';
+
+  for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < i + 1; j++) {
+      output += '*';
+    }
+    output += '\n';
+  }
+
+  console.log(output);
+</script>
+```
+
+```html
+<script>
+  // 피라미드 예제 2
+  // *
+  // ***
+  // *****
+  // *******
+  // *********
+  // ***********
+</script>
+```
+
+```html
+<script>
+  let output = '';
+
+  for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 2 * i + 1; j++) {
+      output += '*';
+    }
+    output += '\n';
+  }
+
+  console.log(output);
+</script>
+```
+
+```html
+<script>
+  // 피라미드 예제 3 (각 문장 앞에 띄어쓰기 모두 한 칸)
+  //  *
+  //  ***
+  //  *****
+  //  *******
+  //  *********
+  //  ************
+</script>
+```
+
+```html
+<script>
+  let output = '';
+
+  for (let i = 0; i < 6; i++) {
+    output += ' ';
+    for (let j = 0; j < 2 * i + 1; j++) {
+      output += '*';
+    }
+    output += '\n';
+  }
+
+  console.log(output);
+</script>
+```
+
+```html
+<script>
+  // 피라미드 예제 4 (각 문장 앞 띄어쓰기 1 ~ 한 칸씩 증가)
+  //  *
+  //   ***
+  //    *****
+  //     *******
+  //      *********
+  //       ***********
+</script>
+```
+
+```html
+<script>
+  let output = '';
+
+  for (let i = 0; i < 6; i++) {
+    for (let k = 0; k < i + 1; k++) {
+      output += ' ';
+    }
+    for (let j = 0; j < 2 * i + 1; j++) {
+      output += '*';
+    }
+    output += '\n';
+  }
+
+  console.log(output);
+</script>
+```
+
+```html
+<script>
+  // 피라미드 예제 5
+  //     *
+  //    ***
+  //   *****
+  //  *******
+  // *********
+  //***********
+</script>
+```
+
+```html
+<script>
+  let output = '';
+  for (let i = 0; i < 6; i++) {
+    for (let k = 0; k < 5 - i; k++) {
+      output += ' ';
+    }
+    for (let j = 0; j < 2 * i + 1; j++) {
+      output += '*';
+    }
+    output += '\n';
+  }
+  console.log(output);
+</script>
+```
+
+```html
+<script>
+  // 피라미드 예제 6
+  //     *
+  //    ***
+  //   *****
+  //  *******
+  // *********
+  //  *******
+  //   *****
+  //    ***
+  //     *
+</script>
+```
+
+```html
+<script>
+  let output = '';
+
+  for (let i = 0; i < 4; i++) {
+    for (let k = 0; k < 4 - i; k++) {
+      output += ' ';
+    }
+    for (let j = 0; j < 2 * i + 1; j++) {
+      output += '*';
+    }
+    output += '\n';
+  }
+
+  for (let i = 0; i < 5; i++) {
+    for (let k = 0; k < i; k++) {
+      output += ' ';
+    }
+    for (let j = 0; j < 2 * (4 - i) + 1; j++) {
+      output += '*';
+    }
+    output += '\n';
+  }
+
+  console.log(output);
+</script>
+```
+
 #
 
 ### [Note]
@@ -145,6 +356,18 @@ while (i < 10) {
 - continue 구문; early continue 테크닉
 - early return
 - JS; 파일 처리 위해서 Node.js 알아야 함
+- (함정 주의) <br/>
+  `const array = [1, 2, 3, 4]` <br/>
+  `console.log(array.push(5))` => 결과는 5 (최종적으로 현재 배열의 요소 개수)로 나옴 <br/>
+  (원본 배열이 변경됨)
+- 원본과 처리 결과 비교하기 <br/>
+  split 메서드 (비파괴적 처리), push 메서드 (파괴적 처리) <br/>
+  map 메서드 (비파괴적 처리), trim 메서드 (비파괴적 처리)
+- 범용적인 for 반복문에서 반복 변수는 let 키워드 사용!
+- 덧셈에 대한 항등원: 0, 곱셈에 대한 항등원: 1 <br/>
+  (항등원: 어떤 값에 대한 연산 처리 결과로 원본이 유지되는 그 값)
+- 항등원과 역원의 개념 <br/>
+  (역원: 원본과 어떤 값에 대한 연산 처리 결과로 항등원이 나올 때 그 값)
 
 #
 
