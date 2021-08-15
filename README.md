@@ -28,9 +28,11 @@
 
 > > [Primitive data type](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Primitive-data-type.md)
 
+> > [Conditional Statement](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Conditional-statement.md)
+
 > > [Array](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Array.md)
 
-> > [Loop](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Loop.md)
+> > [Loop Statement](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Loop-statement.md)
 
 > > [Function](https://github.com/ding-co/TIL/blob/main/Programming%20Language/Javascript/Function.md)
 
