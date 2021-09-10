@@ -177,8 +177,54 @@
 </script>
 ```
 
+## [static 속성과 메서드]
+
+- static 속성과 매서드 개요
+
+```html
+<script>
+  // 만들어진 Square 객체의 개수를 알고 싶을 때
+  class Square {
+    static count = 0;
+    static test() {}
+
+    constructor(length) {
+      Square.count += 1;
+    }
+  }
+
+  console.log(Square.count);
+  new Square();
+  new Square();
+  new Square();
+  console.log(Square.count);
+</script>
+```
+
+- private 메서드
+
+```html
+<script>
+  // private 메서드
+  class Square {
+    #a;
+
+    #test() {
+      console.log('private test() 메서드입니다.');
+    }
+
+    constructor() {
+      this.#test();
+    }
+  }
+
+  new Square();
+</script>
+```
+
 #
 
 ### [Reference]
 
-[Reference](https://www.youtube.com/watch?v=0e0mmWZUTcY&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=61)
+[Reference1](https://www.youtube.com/watch?v=0e0mmWZUTcY&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=61)
+[Reference2](https://www.youtube.com/watch?v=A3_F05OclV4&list=PLBXuLgInP-5kxpAKy2DNXoebCse2grHjl&index=62)
