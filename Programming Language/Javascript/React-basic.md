@@ -64,6 +64,164 @@
 </html>
 ```
 
+### _클래스 컴포넌트_
+
+- 클래스 컴포넌트 만들기
+- props의 의미
+  - properties 약자
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor(props) {
+          super(props); // this.props = props
+          console.log(props);
+        }
+        render() {
+          return (
+            <h1>
+              {this.props.속성A} - {this.props.속성B}
+            </h1>
+          );
+        }
+      }
+
+      const 컴포넌트 = <App 속성A="값A" 속성B="값B" />;
+
+      const 컨테이너 = document.querySelector('#root');
+
+      ReactDOM.render(컴포넌트, 컨테이너);
+    </script>
+  </body>
+</html>
+```
+
+- 타이머 만들기 예제
+- 컴포넌트의 생애 주기 이벤트
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class Timer extends React.Component {
+        constructor(props) {
+          super(props);
+          // 화면에 변화하는 값을 만들 때 this.state 객체 활용
+          this.state = {
+            현재_시간: new Date().toLocaleString(),
+          };
+        }
+
+        render() {
+          return <h1> {this.state.현재_시간} </h1>;
+        }
+
+        // 컴포넌트가 화면에 추가될 때 자동으로 호출되는 메서드
+        componentDidMount() {
+          // 화면에 변화하는 값을 지정하고 + 반영할 때 this.setState() 활용
+          this.timerId = setInterval(() => {
+            this.setState({
+              현재_시간: new Date().toLocaleString(),
+            });
+          }, 1000);
+        }
+
+        // 컴포넌트가 화면에서 제거될 때 자동으로 호출되는 메서드
+        componentWillUnmount() {
+          clearInterval(this.timerId);
+        }
+      }
+
+      class App extends React.Component {
+        constructor(props) {
+          super(props);
+        }
+        render() {
+          return <Timer />;
+        }
+      }
+
+      const 컴포넌트 = <App />;
+
+      const 컨테이너 = document.querySelector('#root');
+
+      ReactDOM.render(컴포넌트, 컨테이너);
+    </script>
+  </body>
+</html>
+```
+
+- 이벤트 연결하기
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor(props) {
+          super(props);
+          this.이벤트핸들러 = this.이벤트핸들러.bind(this);
+          this.state = {
+            숫자: 0,
+          };
+        }
+        render() {
+          return (
+            <h1 onClick={this.이벤트핸들러}>{this.state.숫자}번 클릭합니다!</h1>
+          );
+        }
+        이벤트핸들러(event) {
+          this.setState({
+            숫자: this.state.숫자 + 1,
+          });
+        }
+      }
+
+      const 컴포넌트 = <App />;
+
+      const 컨테이너 = document.querySelector('#root');
+
+      ReactDOM.render(컴포넌트, 컨테이너);
+    </script>
+  </body>
+</html>
+```
+
 #
 
 ### [Note]
@@ -92,13 +250,17 @@
     - fragment 활용
 
 - 문서 객체 모델 기본 조작
+
   - 태그 만들기
   - 콘텐츠 지정
   - 속성 지정
   - 스타일 지정
+
+- 라이브러리; 복잡성을 숨겨둠
 
 #
 
 ### [Reference]
 
 [Reference1](https://www.youtube.com/watch?v=roNHl2PaptE)
+[Reference2](https://www.youtube.com/watch?v=b0-tyXJTBnU)
